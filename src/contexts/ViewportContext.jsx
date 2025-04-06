@@ -1,4 +1,3 @@
-// src/contexts/ViewportContext.jsx
 import React, { createContext, useState } from "react";
 
 export const ViewportContext = createContext();

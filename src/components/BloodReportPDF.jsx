@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
 const BloodReportPDF = ({ data, patientInfo }) => (
   <Document>
     <Page size="A4" style={styles.page}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerText}>Detailed Blood Report</Text>
         <Text>Patient Name: {patientInfo.name}</Text>
@@ -74,17 +73,14 @@ const BloodReportPDF = ({ data, patientInfo }) => (
         <Text>Date: {patientInfo.date}</Text>
       </View>
 
-      {/* Red Blood Cells Section */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Red Blood Cells (RBC)</Text>
         <View style={styles.table}>
-          {/* Table Header */}
           <View style={styles.tableRow}>
             <Text style={styles.tableColHeader}>Type</Text>
             <Text style={styles.tableColHeader}>Count</Text>
             <Text style={styles.tableColHeader}>Percentage</Text>
           </View>
-          {/* Table Rows */}
           {data.RBC.map((item, index) => (
             <View style={styles.tableRow} key={index}>
               <Text style={styles.tableCol}>{item.type}</Text>
@@ -95,17 +91,14 @@ const BloodReportPDF = ({ data, patientInfo }) => (
         </View>
       </View>
 
-      {/* White Blood Cells Section */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>White Blood Cells (WBC)</Text>
         <View style={styles.table}>
-          {/* Table Header */}
           <View style={styles.tableRow}>
             <Text style={styles.tableColHeader}>Type</Text>
             <Text style={styles.tableColHeader}>Count</Text>
             <Text style={styles.tableColHeader}>Percentage</Text>
           </View>
-          {/* Table Rows */}
           {data.WBC.map((item, index) => (
             <View style={styles.tableRow} key={index}>
               <Text style={styles.tableCol}>{item.type}</Text>
@@ -116,14 +109,12 @@ const BloodReportPDF = ({ data, patientInfo }) => (
         </View>
       </View>
 
-      {/* Platelets Section */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Platelets</Text>
         <Text>Count: {data.Platelets.count}</Text>
         <Text>Percentage: {data.Platelets.percentage}</Text>
       </View>
 
-      {/* Footer */}
       <View style={styles.footer}>
         <Text>Page 1</Text>
       </View>

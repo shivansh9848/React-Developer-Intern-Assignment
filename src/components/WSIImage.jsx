@@ -16,20 +16,17 @@ const WSIImage = ({ imageSrc, detections }) => {
         }
     };
 
-    // When the image loads, calculate the initial scale
     const handleImageLoad = () => {
         updateScale();
     };
 
     useEffect(() => {
-        // Create a ResizeObserver to observe the image element
         const observer = new ResizeObserver(() => {
             updateScale();
         });
         if (imgRef.current) {
             observer.observe(imgRef.current);
         }
-        // Clean up observer on unmount
         return () => {
             observer.disconnect();
         };

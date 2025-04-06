@@ -1,4 +1,3 @@
-// rightpanel.jsx
 import React, { useContext, useRef, useEffect, useState } from "react";
 import image from "@/assets/images/image1.png";
 import { ViewportContext } from "@/contexts/ViewportContext";
@@ -14,20 +13,16 @@ const RightPanel = () => {
   const [thumbDims, setThumbDims] = useState({ width: 0, height: 0 });
   const [imageNaturalDims, setImageNaturalDims] = useState({ width: 0, height: 0 });
 
-  // When the thumbnail loads, store its dimensions and the natural image size.
   const handleThumbLoad = (e) => {
     const { width, height, naturalWidth, naturalHeight } = e.target;
     setThumbDims({ width, height });
     setImageNaturalDims({ width: naturalWidth, height: naturalHeight });
   };
 
-  // Compute scaling factor for thumbnail relative to the original image.
   const scaleFactorX = thumbDims.width / imageNaturalDims.width || 1;
   const scaleFactorY = thumbDims.height / imageNaturalDims.height || 1;
 
-  // Compute the viewport bounding box on the thumbnail.
-  // This calculation assumes that the center view displays the image at 1:1 relative to the original image.
-  // If the center view applies additional scaling, you might need to adjust accordingly.
+ 
   const boxLeft = -viewport.x * scaleFactorX;
   const boxTop = -viewport.y * scaleFactorY;
   const boxWidth = (viewport.width / viewport.scale) * scaleFactorX;

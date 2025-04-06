@@ -1,7 +1,7 @@
 import {
     useControls,
 } from "react-zoom-pan-pinch";
-import { ZoomIn, ZoomOut, RotateCcw } from "lucide-react"; // Lucide icons (optional)
+import { ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 
 const Controls = () => {
     const { zoomIn, zoomOut, resetTransform } = useControls();
