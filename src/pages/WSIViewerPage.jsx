@@ -10,12 +10,12 @@ export default function WSIViewerPage() {
         <ViewportProvider>
             <div className="flex flex-col min-h-screen">
                 <Header />
-                <div className="grid grid-cols-10 w-full flex-grow">
-                    <div className="col-span-3 bg-gray-100 p-4">
+                <div className="grid grid-cols-20 w-full flex-grow">
+                    <div className="col-span-5 bg-gray-100 p-4">
                         <LeftPanel />
                     </div>
 
-                    <div className="col-span-7 p-4 bg-gray-200 relative overflow-hidden">
+                    <div className="col-span-15 p-4 bg-gray-200 relative overflow-hidden">
                         <CenterView />
 
                         <div
