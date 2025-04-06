@@ -41,7 +41,7 @@ const CenterView = () => {
     return (
         <div ref={containerRef} className="w-full h-full relative">
           <TransformWrapper
-            initialScale={0.7}
+            initialScale={0.8}
             minScale={0.5}
             maxScale={5}
             initialPositionX={100}

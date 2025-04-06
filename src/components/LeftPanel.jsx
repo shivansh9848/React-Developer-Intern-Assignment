@@ -38,7 +38,9 @@ const CellSection = ({ title, data, color }) => (
 
 const LeftPanel = () => {
   return (
-    <div className="bg-white shadow-md p-4 w-full h-full overflow-y-auto rounded-md space-y-4">
+   
+
+    <div id="report-content" className="bg-white shadow-md p-4 w-full h-full overflow-y-auto rounded-md space-y-4">
       <h2 className="text-2xl font-bold text-gray-800 mb-2">🧪 Detailed Blood Report</h2>
 
       <CellSection
