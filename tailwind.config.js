@@ -1,14 +1,13 @@
+// tailwind.config.js
 module.exports = {
-  theme: {
-    extend: {},
-  },
-  corePlugins: {
-    preflight: false, // optional, disables normalize styles
-  },
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
-};
+    theme: {
+      extend: {
+        colors: {
+          // use basic RGB/HEX values
+          primary: '#1f2937', // instead of oklch()
+        },
+      },
+    },
+    // Remove any plugins that use oklch
+  }
+  

@@ -41,7 +41,7 @@ const WSIImage = ({ imageSrc, detections }) => {
                 ref={imgRef}
                 src={imageSrc}
                 alt="WSI"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain rounded-lg shadow-lg"
                 onLoad={handleImageLoad}
             />
 

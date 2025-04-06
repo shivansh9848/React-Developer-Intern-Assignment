@@ -43,7 +43,7 @@ const CenterView = () => {
           <TransformWrapper
             initialScale={0.8}
             minScale={0.5}
-            maxScale={5}
+            maxScale={10}
             initialPositionX={100}
             initialPositionY={100}
             minPositionX={-200}
