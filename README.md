@@ -1,6 +1,6 @@
 # 🌜 Blood Report Viewer
 
-A modern and interactive medical blood report viewer built using **React** and **Tailwind css**, featuring image zoom/pan capabilities, styled data panels, and **PDF report generation** using `@react-pdf/renderer`.
+A modern and interactive medical Whole Slide Image Viewer built using **React** and **Tailwind css**, featuring image zoom/pan capabilities, styled data panels, and **PDF report generation** using `@react-pdf/renderer`.
 
 ## 🔍 Features
 
