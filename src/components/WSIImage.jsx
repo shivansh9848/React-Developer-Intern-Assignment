@@ -4,7 +4,6 @@ const WSIImage = ({ imageSrc, detections }) => {
     const imgRef = useRef(null);
     const [scale, setScale] = useState({ scaleX: 1, scaleY: 1 });
 
-    // Function to calculate and update scale factors
     const updateScale = () => {
         if (imgRef.current) {
             const naturalWidth = imgRef.current.naturalWidth;
@@ -38,7 +37,6 @@ const WSIImage = ({ imageSrc, detections }) => {
 
     return (
         <div className="relative w-full h-full">
-            {/* Render the WSI image with a ref and onLoad event */}
             <img
                 ref={imgRef}
                 src={imageSrc}
@@ -48,7 +46,6 @@ const WSIImage = ({ imageSrc, detections }) => {
             />
 
 
-            {/* Render bounding boxes scaled to the rendered image size */}
             {detections.map(([x_min, y_min, x_max, y_max, label], index) => (
                 <div
                     key={index}

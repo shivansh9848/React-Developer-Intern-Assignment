@@ -18,12 +18,11 @@ export default function WSIViewerPage() {
                     <div className="col-span-7 p-4 bg-gray-200 relative overflow-hidden">
                         <CenterView />
 
-                        {/* Floating Right Panel */}
                         <div
                             className="absolute top-4 right-4 z-20 bg-white shadow-lg rounded-lg"
                             style={{
                                 width: "250px",
-                                maxHeight: "calc(100vh - 100px)", // adjust this based on Header height
+                                maxHeight: "calc(100vh - 100px)", 
                                 overflowY: "auto",
                                 overflowX: "hidden",
                                 padding: "1rem",

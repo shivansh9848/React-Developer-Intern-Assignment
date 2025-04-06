@@ -1,4 +1,3 @@
-// centerview.jsx
 import React, { useState, useEffect, useContext, useRef } from "react";
 import {
     TransformWrapper,
@@ -26,7 +25,6 @@ const CenterView = () => {
         }
     }, []);
 
-    // Helper to update the viewport state with the current transform
     const updateViewport = (state) => {
         if (containerRef.current) {
             const { clientWidth, clientHeight } = containerRef.current;

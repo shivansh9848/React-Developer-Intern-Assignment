@@ -37,7 +37,6 @@ const RightPanel = () => {
     <div className="right-panel relative">
       <div className="hub-view relative">
         
-        {/* Thumbnail image */}
         <img
           ref={thumbRef}
           src={image}
@@ -45,7 +44,6 @@ const RightPanel = () => {
           onLoad={handleThumbLoad}
           className="w-full object-contain"
         />
-        {/* Overlay box representing the center view’s visible area */}
         <div
           className="absolute border-2 border-blue-500 pointer-events-none"
           style={{
