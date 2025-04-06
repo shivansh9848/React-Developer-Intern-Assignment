@@ -74,7 +74,7 @@ const BloodReportPDF = ({ data, patientInfo, doctorNotes }) => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>🧪 Detailed Blood Report</Text>
+        <Text style={styles.headerText}> Detailed Blood Report</Text>
         <Text>Patient Name: {patientInfo.name}</Text>
         <Text>Age: {patientInfo.age}</Text>
         <Text>Date: {patientInfo.date}</Text>
