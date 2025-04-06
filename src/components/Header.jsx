@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 const Header = () => {
-    return (
-        <div className="header">
-          <h3>Mon Oct 07 2024 16:39:07</h3>
-        </div>
-      );
-}
+  return (
+    <header className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+      {/* Company Name */}
+      <h1 className="text-xl font-bold text-gray-800">MyCompany</h1>
 
-export default Header
+      {/* Current Date/Time */}
+      <h3 className="text-sm text-gray-500">
+        {new Date().toDateString()} {new Date().toLocaleTimeString()}
+      </h3>
+    </header>
+  );
+};
+
+export default Header;
