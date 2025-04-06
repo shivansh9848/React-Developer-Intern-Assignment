@@ -1,73 +1,80 @@
-import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
-
+import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
     padding: 30,
     fontSize: 12,
-    fontFamily: 'Helvetica',
-    color: '#333',
+    fontFamily: "Helvetica",
+    color: "#333",
   },
   header: {
     marginBottom: 20,
     paddingBottom: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-    borderBottomStyle: 'solid',
+    borderBottomColor: "#ccc",
+    borderBottomStyle: "solid",
   },
   headerText: {
-    fontSize: 14,
-    fontWeight: 'bold',
+    fontSize: 16,
+    marginBottom: 6,
+    fontWeight: "bold",
   },
   section: {
     marginBottom: 10,
   },
   sectionTitle: {
     fontSize: 12,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 4,
-    color: '#007BFF',
+    color: "#007BFF",
   },
   table: {
-    display: 'table',
-    width: 'auto',
+    display: "table",
+    width: "auto",
     marginBottom: 10,
   },
   tableRow: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   tableColHeader: {
-    width: '33.33%',
+    width: "33.33%",
     borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    borderBottomStyle: 'solid',
+    borderBottomColor: "#000",
+    borderBottomStyle: "solid",
     padding: 5,
-    backgroundColor: '#f0f0f0',
-    fontWeight: 'bold',
+    backgroundColor: "#f0f0f0",
+    fontWeight: "bold",
   },
   tableCol: {
-    width: '33.33%',
+    width: "33.33%",
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-    borderBottomStyle: 'solid',
+    borderBottomColor: "#ccc",
+    borderBottomStyle: "solid",
     padding: 5,
   },
+  doctorNotesSection: {
+    marginTop: 20,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderStyle: "solid",
+  },
   footer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 30,
     left: 0,
     right: 0,
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 10,
-    color: '#666',
+    color: "#666",
   },
 });
 
-const BloodReportPDF = ({ data, patientInfo }) => (
+const BloodReportPDF = ({ data, patientInfo, doctorNotes }) => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Detailed Blood Report</Text>
+        <Text style={styles.headerText}>🧪 Detailed Blood Report</Text>
         <Text>Patient Name: {patientInfo.name}</Text>
         <Text>Age: {patientInfo.age}</Text>
         <Text>Date: {patientInfo.date}</Text>
@@ -113,6 +120,17 @@ const BloodReportPDF = ({ data, patientInfo }) => (
         <Text style={styles.sectionTitle}>Platelets</Text>
         <Text>Count: {data.Platelets.count}</Text>
         <Text>Percentage: {data.Platelets.percentage}</Text>
+      </View>
+
+      <View style={styles.doctorNotesSection}>
+        <Text style={[styles.sectionTitle, { color: "#333" }]}>
+          Doctor's Notes & Diagnostic Conclusions
+        </Text>
+        <Text>
+          {doctorNotes
+            ? doctorNotes
+            : "No notes provided. Please add your diagnostic conclusions here."}
+        </Text>
       </View>
 
       <View style={styles.footer}>

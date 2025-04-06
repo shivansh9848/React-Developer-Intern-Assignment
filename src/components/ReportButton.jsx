@@ -21,32 +21,19 @@ const sampleData = {
     Platelets: { count: "250,000/μL", percent: "100%" },
 };
 const patientInfo = {
-    id: "P123456",
     name: "John Doe",
-    gender: "Male",
-    birthDate: "1985-07-24",
-    contact: {
-        phone: "+1-555-123-4567",
-        email: "johndoe@example.com"
-    },
-    address: {
-        line: ["123 Main St"],
-        city: "Anytown",
-        state: "CA",
-        postalCode: "90210",
-        country: "USA"
-    },
-    maritalStatus: "Married",
-    language: "English",
-    race: "Caucasian",
-    ethnicity: "Non-Hispanic",
-    bloodType: "O+"
+    age: "45",
+    date: new Date().toLocaleDateString(),
 };
+
+const doctorNotes =
+    "Patient shows slightly elevated WBC count. Recommend follow-up tests for possible infection. RBC parameters are within normal limits.";
+
 
 const ReportButton = () => (
     <div className="report-button-container mt-4 fixed bottom-4 right-4">
         <PDFDownloadLink
-            document={<BloodReportPDF data={sampleData} patientInfo={patientInfo} />}
+            document={<BloodReportPDF data={sampleData} patientInfo={patientInfo} doctorNotes={doctorNotes} />}
             fileName="blood_report.pdf"
         >
             {({ loading }) =>
