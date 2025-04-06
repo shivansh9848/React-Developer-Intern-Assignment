@@ -1,4 +1,4 @@
-# 🌜 Blood Report Viewer
+# 🌜 Whole Slide Image Viewer
 
 A modern and interactive medical Whole Slide Image Viewer built using **React** and **Tailwind css**, featuring image zoom/pan capabilities, styled data panels, and **PDF report generation** using `@react-pdf/renderer`.
 
@@ -38,7 +38,7 @@ src/
 
 ```bash
 git clone https://github.com/shivansh9848/React-Developer-Intern-Assignment.git
-cd blood-report-viewer
+cd Whole-Slide-Image-Viewer
 ```
 
 ### 2. Install dependencies
