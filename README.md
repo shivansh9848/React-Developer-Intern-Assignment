@@ -7,9 +7,9 @@ A modern and interactive medical Whole Slide Image Viewer built using **React** 
 - 🗉️ **High-resolution image viewer** with zoom and pan using `react-zoom-pan-pinch`
 - 📊 **Interactive left panel** displaying detailed blood report data
 - 📃 **PDF generation** of the blood report for download/printing
+- 🧭 **Control buttons** on the right panel to zoom in, zoom out, and reset the image position
 - 🧠 Real-time viewport tracking for better UX
 - 🎨 Clean and responsive UI built with Tailwind CSS and Lucide Icons
-
 ---
 
 ## 📁 Project Structure
